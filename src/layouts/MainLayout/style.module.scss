@@ -5,7 +5,14 @@ $bottomPadding: 40px;
   display: flex;
 
   &__container {
-    padding: 35px 24px 40px;
+    display: flex;
+    flex-direction: column;
+    padding: $topPadding 24px $bottomPadding;
     min-height: calc(100vh - ($topPadding + $bottomPadding));
+    width: 100%;
+
+    &BackButton {
+      padding-bottom: 20px;
+    }
   }
 }

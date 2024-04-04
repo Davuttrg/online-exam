@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import SideBar from "../../components/SideBar";
 import styles from "./style.module.scss";
+import BackButton from "../../components/BackButton";
 
 const MainLayout = () => {
   return (
@@ -8,7 +9,9 @@ const MainLayout = () => {
       <SideBar />
 
       <div className={styles.mainLayout__container}>
-        <h1>Main Layout</h1>
+        <div className={styles.mainLayout__containerBackButton}>
+          <BackButton />
+        </div>
         <Outlet />
       </div>
     </main>

@@ -52,7 +52,7 @@ const SideBar = () => {
   return (
     <nav className={styles.sideBar}>
       <div>
-        <div className={styles.sideBar__item}>
+        <div className={styles.sideBar__logo}>
           <img src="./images/sidebar/logo.svg" alt="logo" />
         </div>
         <div className={styles.sideBar__list}>

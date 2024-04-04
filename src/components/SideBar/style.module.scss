@@ -1,10 +1,11 @@
-$rootPadding: 24px;
+$rootVerticalPadding: 40px;
+$rootHorizontalPadding: 18px;
 
 .sideBar {
-  min-height: calc(100vh - (2 * $rootPadding));
+  min-height: calc(100vh - (2 * $rootVerticalPadding));
   max-width: 97px;
   background: var(--color-sidebar-bg);
-  padding: $rootPadding;
+  padding: $rootVerticalPadding $rootHorizontalPadding;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -25,10 +26,21 @@ $rootPadding: 24px;
     cursor: pointer;
     padding: 10px 15px;
     border-radius: 10px;
+    width: 30px;
+    height: 30px;
+    transition: transform 0.2s ease;
 
     &--active {
       background: var(--color-bg-500);
     }
+    &:hover:not(&--active) {
+      transform: scale(1.2);
+    }
+  }
+
+  &__logo {
+    display: flex;
+    justify-content: center;
   }
 
   &__list {

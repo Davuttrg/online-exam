@@ -1,0 +1,15 @@
+.button {
+  border: 0;
+  outline: unset;
+  cursor: pointer;
+  padding: 15px 20px;
+  border-radius: 10px;
+  background: var(--color-bg-100);
+  font-weight: 800;
+  transition: all 0.1s cubic-bezier(0.5, 0.75, 0.68, 1.52);
+
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    transform: translateY(-2px);
+  }
+}

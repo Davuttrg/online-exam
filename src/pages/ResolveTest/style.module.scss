@@ -1,0 +1,12 @@
+.resolveTest {
+  flex: 1;
+  display: flex;
+  gap: 24px;
+
+  &__questions {
+    flex: 3;
+  }
+  &__answerKey {
+    flex: 1;
+  }
+}
