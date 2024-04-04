@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { Navigate, createBrowserRouter } from "react-router-dom";
 import MainLayout from "../layouts/MainLayout";
 import ResolveTest from "../pages/ResolveTest";
 
@@ -10,6 +10,10 @@ const useRouter = () => {
       children: [
         {
           path: "/",
+          element: <Navigate to="/questions" />,
+        },
+        {
+          path: "/questions",
           element: <ResolveTest />,
         },
       ],

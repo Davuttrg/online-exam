@@ -1,0 +1,46 @@
+$rootPadding: 24px;
+
+.sideBar {
+  min-height: calc(100vh - (2 * $rootPadding));
+  max-width: 97px;
+  background: var(--color-sidebar-bg);
+  padding: $rootPadding;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  > div:first-child {
+    display: flex;
+    flex-direction: column;
+    gap: 54px;
+
+    @media screen and (max-width: 1600px) {
+      gap: 24px;
+    }
+  }
+
+  @mixin navItem {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 10px;
+
+    &--active {
+      background: var(--color-bg-500);
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+
+    &Item {
+      @include navItem;
+    }
+  }
+
+  &__item {
+    @include navItem;
+  }
+}

@@ -1,0 +1,11 @@
+$topPadding: 35px;
+$bottomPadding: 40px;
+
+.mainLayout {
+  display: flex;
+
+  &__container {
+    padding: 35px 24px 40px;
+    min-height: calc(100vh - ($topPadding + $bottomPadding));
+  }
+}
