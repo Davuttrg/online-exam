@@ -4,12 +4,17 @@
   cursor: pointer;
   padding: 15px 20px;
   border-radius: 10px;
-  background: var(--color-bg-100);
+  background: var(--color-bg-200);
   font-weight: 800;
-  transition: all 0.1s cubic-bezier(0.5, 0.75, 0.68, 1.52);
+  transition: all 0.15s cubic-bezier(0.5, 0.75, 0.68, 1.52);
 
   &:hover {
-    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    box-shadow: var(--shadow-2);
     transform: translateY(-2px);
+  }
+
+  &--success {
+    background: var(--color-success);
+    color: var(--color-text-secondary);
   }
 }

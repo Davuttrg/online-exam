@@ -1,0 +1,68 @@
+.questionAnswerItem {
+  display: flex;
+  gap: 15px;
+  background: var(--color-bg-100);
+  align-items: center;
+  padding: 5px 16px;
+  height: 56px;
+  padding-right: 7px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  border: 1px solid transparent;
+
+  input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    padding: 2px;
+    background-clip: content-box;
+    border: 1.5px solid var(--color-text-main);
+    border-radius: 50%;
+    margin: 0;
+    transition: all 0.2s ease;
+  }
+
+  input[type="radio"]:checked {
+    border: 2px solid var(--color-radio-bg);
+    background-color: var(--color-radio-bg);
+  }
+
+  &__label {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateX(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0px);
+      }
+    }
+    &Action {
+      animation: fadeIn 0.3s linear;
+    }
+  }
+
+  &--selected {
+    background: var(--color-bg-300);
+  }
+
+  &--success {
+    background: rgba(var(--color-success-rgb), 0.1);
+    border-color: var(--color-success);
+
+    input[type="radio"]:checked {
+      border-color: var(--color-success);
+    }
+  }
+}

@@ -1,12 +1,47 @@
 import Button from "../common/Button";
 import Card from "../common/Card";
 import IconButton from "../common/IconButton";
+import QuestionAnswerItem from "./QuestionAnswerItem";
 import styles from "./style.module.scss";
 import { BiPaint, BiZoomIn, BiZoomOut, BiErrorCircle } from "react-icons/bi";
+import { Answer, AnswerValueType } from "./type";
+import { useState } from "react";
 
 const Questions = () => {
   const question =
     "“Şair, şiirlerinde hava alacak boşluk bırakmıyor, her şeyi söylüyor. Okuyucunun adına da kendisi konuşuyor. Bunun için dizleri hayalinizi perdeliyor, soluğunuzu kesiyor, sizi boğuyor.” </br> </br>  <b>Bu parçada geçen “hava alacak boşluk bırakmamak” sözüyle anlatılmak istenen aşağıdakilerden hangisidir?</b>";
+
+  const answers: {
+    list: Answer[];
+    realAnswer: AnswerValueType;
+  } = {
+    list: [
+      {
+        text: "Görgüsüzce davranmasaydın, seni böyle dışlamazdık.",
+        value: "A",
+      },
+      {
+        text: "Görgüsüzce davranmasaydın, seni böyle dışlamazdık.",
+        value: "B",
+      },
+      {
+        text: "Görgüsüzce davranmasaydın, seni böyle dışlamazdık.",
+        value: "C",
+      },
+      {
+        text: "Görgüsüzce davranmasaydın, seni böyle dışlamazdık.",
+        value: "D",
+      },
+      {
+        text: "Görgüsüzce davranmasaydın, seni böyle dışlamazdık.",
+        value: "E",
+      },
+    ],
+    realAnswer: "A",
+  };
+
+  const [selectedAnswer, setSelectedAnswer] = useState<Answer>();
+
   return (
     <div className={styles.questions}>
       <h2 className={styles.questions__title}> Konu Tarama Testi #1</h2>
@@ -28,14 +63,17 @@ const Questions = () => {
         <div className={styles.questions__cardBody}>
           <p dangerouslySetInnerHTML={{ __html: question }} />
           <div className={styles.questions__cardBodyAnswer}>
-            <div className={styles.questions__cardBodyAnswerItem}>
-              <input type="radio" name="option" value="1" />
-              <p> A) Görgüsüzce davranmasaydın, seni böyle dışlamazdık.</p>
-            </div>
-            <div className={styles.questions__cardBodyAnswerItem}>
-              <input type="radio" name="option" value="2" />
-              <p> B) Görgüsüzce davranmasaydın, seni böyle dışlamazdık.</p>
-            </div>
+            {answers.list.map((answer) => (
+              <QuestionAnswerItem
+                key={answer.value}
+                realAnswerValue={
+                  !!selectedAnswer ? answers.realAnswer : undefined
+                }
+                isSelected={selectedAnswer?.value === answer.value}
+                onChange={setSelectedAnswer}
+                answer={answer}
+              />
+            ))}
           </div>
         </div>
       </Card>

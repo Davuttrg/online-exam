@@ -2,14 +2,19 @@
   --color-text-main: #1e2029;
   --color-text-secondary: white;
   --color-bg-main: #f9f9f9;
-  --color-bg-100: #edf2f4;
-  --color-bg-200: #eef2f4;
+  --color-bg-100: #f8fafb;
+  --color-bg-200: #edf2f4;
+  --color-bg-300: #eef2f4;
   --color-bg-500: #f3f7f9;
   --color-sidebar-bg: white;
   --color-card-bg: white;
+  --color-radio-bg: white;
   --color-badge-1: #2c3e50;
   --color-error: #f85050;
+  --color-success: #1abc9c;
+  --color-success-rgb: 26, 188, 156;
   --shadow-1: 0px 12px 50px 0px #0000000a;
+  --shadow-2: rgba(0, 0, 0, 0.04) 0px 3px 5px;
 }
 
 body {
@@ -32,5 +37,9 @@ h3,
 h4,
 h5,
 h6 {
+  margin: 0;
+}
+
+p {
   margin: 0;
 }
