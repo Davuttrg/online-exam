@@ -1,0 +1,18 @@
+.questionWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  height: calc(100vh - 358px);
+  overflow: auto;
+
+  &__answers {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    &Item {
+      display: flex;
+      gap: 4px;
+    }
+  }
+}

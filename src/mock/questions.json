@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "order": 1,
+    "question": "“Şair, şiirlerinde hava alacak boşluk bırakmıyor, her şeyi söylüyor. Okuyucunun adına da kendisi konuşuyor. Bunun için dizleri hayalinizi perdeliyor, soluğunuzu kesiyor, sizi boğuyor.” </br> </br>  <b>Bu parçada geçen “hava alacak boşluk bırakmamak” sözüyle anlatılmak istenen aşağıdakilerden hangisidir?</b>",
+    "answers": [
+      {
+        "text": "<b><u>Görgüsüzce</u></b> davranmasaydın, seni böyle dışlamazdık.",
+        "value": "A"
+      },
+      {
+        "text": "Ekip arkadaşlarıyla ters düşmeyen, <b><u>uyumlu</u></b>  bir teknisyendi.",
+        "value": "B"
+      },
+      {
+        "text": "Her şeyin kendisinin olmasını isteyen <b><u>açgözlü</u></b> biriydi.",
+        "value": "C"
+      },
+      {
+        "text": "Bir dediği bir dediğini tutmayan <b><u>tutarsız</u></b> bir gazeteciydi.",
+        "value": "D"
+      },
+      {
+        "text": "Ağzında bakla ıslanmayan <b><u>boşboğaz</u></b> adamın tekiydi o.",
+        "value": "E"
+      }
+    ],
+    "realAnswerValue": "E"
+  },
+  {
+    "id": 2,
+    "order": 2,
+    "question": "“Şair2, şiirlerinde hava alacak boşluk bırakmıyor, her şeyi söylüyor. Okuyucunun adına da kendisi konuşuyor. Bunun için dizleri hayalinizi perdeliyor, soluğunuzu kesiyor, sizi boğuyor.” </br> </br>  <b>Bu parçada geçen “hava alacak boşluk bırakmamak” sözüyle anlatılmak istenen aşağıdakilerden hangisidir?</b>",
+    "answers": [
+      {
+        "text": "<b><u>Görgüsüzce</u></b> davranmasaydın, seni böyle dışlamazdık.",
+        "value": "A"
+      },
+      {
+        "text": "Ekip arkadaşlarıyla ters düşmeyen, <b><u>uyumlu</u></b>  bir teknisyendi.",
+        "value": "B"
+      },
+      {
+        "text": "Her şeyin kendisinin olmasını isteyen <b><u>açgözlü</u></b> biriydi.",
+        "value": "C"
+      },
+      {
+        "text": "Bir dediği bir dediğini tutmayan <b><u>tutarsız</u></b> bir gazeteciydi.",
+        "value": "D"
+      },
+      {
+        "text": "Ağzında bakla ıslanmayan <b><u>boşboğaz</u></b> adamın tekiydi o.",
+        "value": "E"
+      }
+    ],
+    "realAnswerValue": "B"
+  }
+]

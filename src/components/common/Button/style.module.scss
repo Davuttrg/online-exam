@@ -7,8 +7,15 @@
   background: var(--color-bg-200);
   font-weight: 800;
   transition: all 0.15s cubic-bezier(0.5, 0.75, 0.68, 1.52);
+  display: flex;
+  align-items: center;
+  gap: 5px;
 
-  &:hover {
+  &:disabled {
+    pointer-events: none;
+  }
+
+  &:hover(:not(&:disabled)) {
     box-shadow: var(--shadow-2);
     transform: translateY(-2px);
   }

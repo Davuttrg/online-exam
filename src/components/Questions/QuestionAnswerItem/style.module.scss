@@ -7,9 +7,12 @@
   height: 56px;
   padding-right: 7px;
   border-radius: 10px;
-  cursor: pointer;
   transition: background 0.2s ease;
   border: 1px solid transparent;
+
+  &:not(&--readonly) {
+    cursor: pointer;
+  }
 
   input[type="radio"] {
     -webkit-appearance: none;
@@ -48,8 +51,15 @@
         transform: translateX(0px);
       }
     }
+
+    &Text {
+      display: flex;
+      gap: 4px;
+    }
+
     &Action {
       animation: fadeIn 0.3s linear;
+      padding: 11px 20px;
     }
   }
 
@@ -61,8 +71,19 @@
     background: rgba(var(--color-success-rgb), 0.1);
     border-color: var(--color-success);
 
+    input[type="radio"],
     input[type="radio"]:checked {
       border-color: var(--color-success);
+    }
+  }
+
+  &--error {
+    background: rgba(var(--color-error-rgb), 0.1);
+    border-color: var(--color-error);
+
+    input[type="radio"],
+    input[type="radio"]:checked {
+      border-color: var(--color-error);
     }
   }
 }
