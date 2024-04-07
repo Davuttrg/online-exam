@@ -10,5 +10,5 @@ Test solving tool
 
 ## Screen Vide
 
-![App Video](https://github.com/Davuttrg/online-exam/blob/main/public/images/ss/app-record.mov)
+![App Video](https://github.com/Davuttrg/online-exam/blob/main/public/images/ss/app-record.mp4)
   
