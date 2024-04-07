@@ -1,0 +1,51 @@
+.alertDialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.3);
+
+  &__content {
+    width: 370px;
+    border-radius: 15px;
+    gap: 35px;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 35px 20px;
+
+    &Body {
+      display: flex;
+      flex-direction: column;
+      gap: 21px;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      &Header {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+      }
+
+      &Message {
+        text-align: center;
+      }
+    }
+
+    &Footer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+
+      button {
+        flex: 1;
+      }
+    }
+  }
+}

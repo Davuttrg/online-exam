@@ -18,6 +18,7 @@ interface ExamState {
   isFirstQuestion: boolean;
   isLastQuestion: boolean;
   isDone: boolean;
+  isDisplayAnswer: boolean;
 }
 
 const initialState: ExamState = {
@@ -27,6 +28,7 @@ const initialState: ExamState = {
   isFirstQuestion: true,
   isLastQuestion: false,
   isDone: false,
+  isDisplayAnswer: false,
 };
 
 export const examSlice = createSlice({
@@ -84,10 +86,29 @@ export const examSlice = createSlice({
 
       state.userAnswers = answers;
     },
+    switchDisplayAnswer: (state) => {
+      state.isDisplayAnswer = !state.isDisplayAnswer;
+    },
+
+    adjustActiveQuestion: (state, action: PayloadAction<QuestionModel>) => {
+      state.activeQuestion = action.payload;
+      const questionIndex = state.questions.findIndex(
+        (item) => item.id === action.payload.id
+      );
+
+      state.isLastQuestion = questionIndex === state.questions.length - 1;
+
+      state.isFirstQuestion = questionIndex === 0;
+    },
   },
 });
 
-export const { moveNextQuestion, moveBackQuestion, answerToQuestion } =
-  examSlice.actions;
+export const {
+  moveNextQuestion,
+  moveBackQuestion,
+  answerToQuestion,
+  switchDisplayAnswer,
+  adjustActiveQuestion,
+} = examSlice.actions;
 
 export default examSlice.reducer;

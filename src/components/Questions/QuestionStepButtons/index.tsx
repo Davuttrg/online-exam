@@ -14,9 +14,8 @@ const QuestionStepButtons = () => {
   const handleNext = () => dispatch(moveNextQuestion());
   const handleBack = () => dispatch(moveBackQuestion());
 
-  const isAnswered = examState.userAnswers.find(
-    (item) => item.question.id === examState.activeQuestion.id
-  );
+  const isAnsweredAllQuestions =
+    examState.questions.length === examState.userAnswers.length;
 
   return (
     <div className={styles.questionStepButtons}>
@@ -30,7 +29,7 @@ const QuestionStepButtons = () => {
 
       <div>
         <Button
-          disabled={!isAnswered}
+          disabled={examState.isLastQuestion && !isAnsweredAllQuestions}
           onClick={handleNext}
           endIcon={
             examState.isLastQuestion ? null : <BiChevronRight size={24} />

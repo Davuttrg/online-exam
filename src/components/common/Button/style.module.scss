@@ -9,19 +9,30 @@
   transition: all 0.15s cubic-bezier(0.5, 0.75, 0.68, 1.52);
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 5px;
 
   &:disabled {
     pointer-events: none;
   }
 
-  &:hover(:not(&:disabled)) {
-    box-shadow: var(--shadow-2);
-    transform: translateY(-2px);
+  &:hover {
+    &:not(&:disabled) {
+      box-shadow: var(--shadow-2);
+      transform: translateY(-2px);
+    }
   }
 
   &--success {
     background: var(--color-success);
+    color: var(--color-text-secondary);
+  }
+
+  &--warning {
+    background: var(--color-warning);
+  }
+  &--error {
+    background: var(--color-error);
     color: var(--color-text-secondary);
   }
 }

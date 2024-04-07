@@ -9,7 +9,7 @@
         "value": "A"
       },
       {
-        "text": "Ekip arkadaşlarıyla ters düşmeyen, <b><u>uyumlu</u></b>  bir teknisyendi.",
+        "text": "Ekip arkadaşlarıyla ters düşmeyen, <b><u>uyumlu</u></b> bir teknisyendi.",
         "value": "B"
       },
       {
@@ -30,26 +30,390 @@
   {
     "id": 2,
     "order": 2,
-    "question": "“Şair2, şiirlerinde hava alacak boşluk bırakmıyor, her şeyi söylüyor. Okuyucunun adına da kendisi konuşuyor. Bunun için dizleri hayalinizi perdeliyor, soluğunuzu kesiyor, sizi boğuyor.” </br> </br>  <b>Bu parçada geçen “hava alacak boşluk bırakmamak” sözüyle anlatılmak istenen aşağıdakilerden hangisidir?</b>",
+    "question": "Bir sorununuz mu var? Yardımcı olabilir miyim?",
     "answers": [
       {
-        "text": "<b><u>Görgüsüzce</u></b> davranmasaydın, seni böyle dışlamazdık.",
+        "text": "Sadece <b><u>tek</u></b> kaldığımda hissediyorum gerçek mutluluğu.",
         "value": "A"
       },
       {
-        "text": "Ekip arkadaşlarıyla ters düşmeyen, <b><u>uyumlu</u></b>  bir teknisyendi.",
+        "text": "İçinizdeki <b><u>umudu</u></b> kaybetmeyin.",
         "value": "B"
       },
       {
-        "text": "Her şeyin kendisinin olmasını isteyen <b><u>açgözlü</u></b> biriydi.",
+        "text": "Küçük <b><u>başarılar</u></b>, büyük bir başlangıca dönüşebilir.",
         "value": "C"
       },
       {
-        "text": "Bir dediği bir dediğini tutmayan <b><u>tutarsız</u></b> bir gazeteciydi.",
+        "text": "<b><u>Herkesin</u></b> bir hayali vardır, önemli olan onu gerçekleştirmektir.",
         "value": "D"
       },
       {
-        "text": "Ağzında bakla ıslanmayan <b><u>boşboğaz</u></b> adamın tekiydi o.",
+        "text": "<b><u>Geleceğe</u></b> dair kaygılanmaktan vazgeçmelisiniz.",
+        "value": "E"
+      }
+    ],
+    "realAnswerValue": "C"
+  },
+  {
+    "id": 3,
+    "order": 3,
+    "question": "Eğitimdeki mevcut durumunuzu nasıl değerlendiriyorsunuz?",
+    "answers": [
+      {
+        "text": "Sadece <b><u>tek</u></b> kaldığımda hissediyorum gerçek mutluluğu.",
+        "value": "A"
+      },
+      {
+        "text": "Eğitim, <b><u>geleceğin</u></b> temelini oluşturur.",
+        "value": "B"
+      },
+      {
+        "text": "Herkesin <b><u>kendi</u></b> başarı hikayesi vardır.",
+        "value": "C"
+      },
+      {
+        "text": "<b><u>Bir</u></b> insanı tanımanın en iyi yolu, onunla tartışmaktır.",
+        "value": "D"
+      },
+      {
+        "text": "<b><u>Zamanla</u></b> her şey değişir.",
+        "value": "E"
+      }
+    ],
+    "realAnswerValue": "B"
+  },
+  {
+    "id": 4,
+    "order": 4,
+    "question": "Yeni yıl hedefleriniz nelerdir?",
+    "answers": [
+      {
+        "text": "Başarılı insanlar, <b><u>hedeflerine</u></b> ulaşmak için azimle çalışır.",
+        "value": "A"
+      },
+      {
+        "text": "<b><u>Kendinizi</u></b> tanıyarak başarıya ulaşabilirsiniz.",
+        "value": "B"
+      },
+      {
+        "text": "Herkesin <b><u>kendi</u></b> başarı hikayesi vardır.",
+        "value": "C"
+      },
+      {
+        "text": "<b><u>Zamanla</u></b> her şey değişir.",
+        "value": "D"
+      },
+      {
+        "text": "Sadece <b><u>tek</u></b> kaldığımda hissediyorum gerçek mutluluğu.",
+        "value": "E"
+      }
+    ],
+    "realAnswerValue": "A"
+  },
+  {
+    "id": 5,
+    "order": 5,
+    "question": "Sosyal medyanın günlük hayatınıza etkisi nedir?",
+    "answers": [
+      {
+        "text": "<b><u>Herkesin</u></b> bir hayali vardır, önemli olan onu gerçekleştirmektir.",
+        "value": "A"
+      },
+      {
+        "text": "Eğitim, <b><u>geleceğin</u></b> temelini oluşturur.",
+        "value": "B"
+      },
+      {
+        "text": "Sosyal medya, <b><u>iletişim</u></b> kurmanın bir yoludur.",
+        "value": "C"
+      },
+      {
+        "text": "<b><u>Zamanla</u></b> her şey değişir.",
+        "value": "D"
+      },
+      {
+        "text": "<b><u>Geleceğe</u></b> dair kaygılanmaktan vazgeçmelisiniz.",
+        "value": "E"
+      }
+    ],
+    "realAnswerValue": "C"
+  },
+  {
+    "id": 6,
+    "order": 6,
+    "question": "Stresle nasıl başa çıkıyorsunuz?",
+    "answers": [
+      {
+        "text": "Yanlış anlama, ama bu iş <b><u>çok</u></b> zor.",
+        "value": "A"
+      },
+      {
+        "text": "Sadece <b><u>tek</u></b> kaldığımda hissediyorum gerçek mutluluğu.",
+        "value": "B"
+      },
+      {
+        "text": "Hayat, <b><u>zorluklarla</u></b> dolu bir yolculuktur.",
+        "value": "C"
+      },
+      {
+        "text": "<b><u>Geleceğe</u></b> dair kaygılanmaktan vazgeçmelisiniz.",
+        "value": "D"
+      },
+      {
+        "text": "<b><u>Herkesin</u></b> bir hayali vardır, önemli olan onu gerçekleştirmektir.",
+        "value": "E"
+      }
+    ],
+    "realAnswerValue": "C"
+  },
+  {
+    "id": 7,
+    "order": 7,
+    "question": "Gelecek hakkında ne düşünüyorsunuz?",
+    "answers": [
+      {
+        "text": "Sadece <b><u>tek</u></b> kaldığımda hissediyorum gerçek mutluluğu.",
+        "value": "A"
+      },
+      {
+        "text": "<b><u>Geleceğe</u></b> dair kaygılanmaktan vazgeçmelisiniz.",
+        "value": "B"
+      },
+      {
+        "text": "Herkesin <b><u>kendi</u></b> başarı hikayesi vardır.",
+        "value": "C"
+      },
+      {
+        "text": "<b><u>Zamanla</u></b> her şey değişir.",
+        "value": "D"
+      },
+      {
+        "text": "Sadece <b><u>tek</u></b> kaldığımda hissediyorum gerçek mutluluğu.",
+        "value": "E"
+      }
+    ],
+    "realAnswerValue": "B"
+  },
+  {
+    "id": 8,
+    "order": 8,
+    "question": "Sosyal ilişkilerinizde ne kadar aktifsiniz?",
+    "answers": [
+      {
+        "text": "<b><u>Herkesin</u></b> bir hayali vardır, önemli olan onu gerçekleştirmektir.",
+        "value": "A"
+      },
+      {
+        "text": "Herkes, <b><u>kendi</u></b> yolunu seçer.",
+        "value": "B"
+      },
+      {
+        "text": "Eğitim, <b><u>geleceğin</u></b> temelini oluşturur.",
+        "value": "C"
+      },
+      {
+        "text": "<b><u>Bir</u></b> insanı tanımanın en iyi yolu, onunla tartışmaktır.",
+        "value": "D"
+      },
+      {
+        "text": "<b><u>Zamanla</u></b> her şey değişir.",
+        "value": "E"
+      }
+    ],
+    "realAnswerValue": "C"
+  },
+  {
+    "id": 9,
+    "order": 9,
+    "question": "Kariyer hedefleriniz nelerdir?",
+    "answers": [
+      {
+        "text": "<b><u>Bir</u></b> insanı tanımanın en iyi yolu, onunla tartışmaktır.",
+        "value": "A"
+      },
+      {
+        "text": "Başarılı insanlar, <b><u>hedeflerine</u></b> ulaşmak için azimle çalışır.",
+        "value": "B"
+      },
+      {
+        "text": "<b><u>Herkesin</u></b> bir hayali vardır, önemli olan onu gerçekleştirmektir.",
+        "value": "C"
+      },
+      {
+        "text": "<b><u>Zamanla</u></b> her şey değişir.",
+        "value": "D"
+      },
+      {
+        "text": "Sadece <b><u>tek</u></b> kaldığımda hissediyorum gerçek mutluluğu.",
+        "value": "E"
+      }
+    ],
+    "realAnswerValue": "B"
+  },
+  {
+    "id": 10,
+    "order": 10,
+    "question": "Hobileriniz nelerdir?",
+    "answers": [
+      {
+        "text": "<b><u>Herkesin</u></b> bir hayali vardır, önemli olan onu gerçekleştirmektir.",
+        "value": "A"
+      },
+      {
+        "text": "<b><u>Kendinizi</u></b> tanıyarak başarıya ulaşabilirsiniz.",
+        "value": "B"
+      },
+      {
+        "text": "Sosyal medya, <b><u>iletişim</u></b> kurmanın bir yoludur.",
+        "value": "C"
+      },
+      {
+        "text": "<b><u>Bir</u></b> insanı tanımanın en iyi yolu, onunla tartışmaktır.",
+        "value": "D"
+      },
+      {
+        "text": "<b><u>Zamanla</u></b> her şey değişir.",
+        "value": "E"
+      }
+    ],
+    "realAnswerValue": "B"
+  },
+  {
+    "id": 11,
+    "order": 11,
+    "question": "Geleceğe yönelik planlarınız nelerdir?",
+    "answers": [
+      {
+        "text": "Sadece <b><u>tek</u></b> kaldığımda hissediyorum gerçek mutluluğu.",
+        "value": "A"
+      },
+      {
+        "text": "<b><u>Geleceğe</u></b> dair kaygılanmaktan vazgeçmelisiniz.",
+        "value": "B"
+      },
+      {
+        "text": "<b><u>Kendinizi</u></b> tanıyarak başarıya ulaşabilirsiniz.",
+        "value": "C"
+      },
+      {
+        "text": "Herkesin <b><u>kendi</u></b> başarı hikayesi vardır.",
+        "value": "D"
+      },
+      {
+        "text": "Sadece <b><u>tek</u></b> kaldığımda hissediyorum gerçek mutluluğu.",
+        "value": "E"
+      }
+    ],
+    "realAnswerValue": "B"
+  },
+  {
+    "id": 12,
+    "order": 12,
+    "question": "Sosyal medya kullanımınız ne sıklıkta?",
+    "answers": [
+      {
+        "text": "<b><u>Herkesin</u></b> bir hayali vardır, önemli olan onu gerçekleştirmektir.",
+        "value": "A"
+      },
+      {
+        "text": "Herkes, <b><u>kendi</u></b> yolunu seçer.",
+        "value": "B"
+      },
+      {
+        "text": "Eğitim, <b><u>geleceğin</u></b> temelini oluşturur.",
+        "value": "C"
+      },
+      {
+        "text": "<b><u>Bir</u></b> insanı tanımanın en iyi yolu, onunla tartışmaktır.",
+        "value": "D"
+      },
+      {
+        "text": "<b><u>Zamanla</u></b> her şey değişir.",
+        "value": "E"
+      }
+    ],
+    "realAnswerValue": "C"
+  },
+  {
+    "id": 13,
+    "order": 13,
+    "question": "Yaşamınızdaki en büyük başarınız nedir?",
+    "answers": [
+      {
+        "text": "<b><u>Herkesin</u></b> bir hayali vardır, önemli olan onu gerçekleştirmektir.",
+        "value": "A"
+      },
+      {
+        "text": "<b><u>Kendinizi</u></b> tanıyarak başarıya ulaşabilirsiniz.",
+        "value": "B"
+      },
+      {
+        "text": "Sosyal medya, <b><u>iletişim</u></b> kurmanın bir yoludur.",
+        "value": "C"
+      },
+      {
+        "text": "<b><u>Bir</u></b> insanı tanımanın en iyi yolu, onunla tartışmaktır.",
+        "value": "D"
+      },
+      {
+        "text": "<b><u>Zamanla</u></b> her şey değişir.",
+        "value": "E"
+      }
+    ],
+    "realAnswerValue": "B"
+  },
+  {
+    "id": 14,
+    "order": 14,
+    "question": "Yaşamınızdaki en büyük zorluk nedir?",
+    "answers": [
+      {
+        "text": "Sadece <b><u>tek</u></b> kaldığımda hissediyorum gerçek mutluluğu.",
+        "value": "A"
+      },
+      {
+        "text": "<b><u>Geleceğe</u></b> dair kaygılanmaktan vazgeçmelisiniz.",
+        "value": "B"
+      },
+      {
+        "text": "Herkesin <b><u>kendi</u></b> başarı hikayesi vardır.",
+        "value": "C"
+      },
+      {
+        "text": "<b><u>Zamanla</u></b> her şey değişir.",
+        "value": "D"
+      },
+      {
+        "text": "Sadece <b><u>tek</u></b> kaldığımda hissediyorum gerçek mutluluğu.",
+        "value": "E"
+      }
+    ],
+    "realAnswerValue": "B"
+  },
+  {
+    "id": 15,
+    "order": 15,
+    "question": "Mutluluğu tanımlar mısınız?",
+    "answers": [
+      {
+        "text": "<b><u>Herkesin</u></b> bir hayali vardır, önemli olan onu gerçekleştirmektir.",
+        "value": "A"
+      },
+      {
+        "text": "<b><u>Kendinizi</u></b> tanıyarak başarıya ulaşabilirsiniz.",
+        "value": "B"
+      },
+      {
+        "text": "Sosyal medya, <b><u>iletişim</u></b> kurmanın bir yoludur.",
+        "value": "C"
+      },
+      {
+        "text": "<b><u>Bir</u></b> insanı tanımanın en iyi yolu, onunla tartışmaktır.",
+        "value": "D"
+      },
+      {
+        "text": "<b><u>Zamanla</u></b> her şey değişir.",
         "value": "E"
       }
     ],

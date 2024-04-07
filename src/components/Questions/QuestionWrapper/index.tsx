@@ -17,15 +17,20 @@ const QuestionWrapper = () => {
   };
 
   const isSuccessAnswer = (answer: AnswerValueType) =>
-    selectedAnswer && answer === examState.activeQuestion.realAnswerValue;
+    selectedAnswer &&
+    examState.isDisplayAnswer &&
+    answer === examState.activeQuestion.realAnswerValue;
 
   const isWrongAnswer = (answer: AnswerValueType) =>
     selectedAnswer &&
     selectedAnswer.answer === answer &&
+    examState.isDisplayAnswer &&
     selectedAnswer.answer !== examState.activeQuestion.realAnswerValue;
 
   const displayAnswerVideo = (ansver: AnswerValueType) =>
-    selectedAnswer && ansver === examState.activeQuestion.realAnswerValue;
+    selectedAnswer &&
+    examState.isDisplayAnswer &&
+    ansver === examState.activeQuestion.realAnswerValue;
 
   return (
     <div className={styles.questionWrapper}>
