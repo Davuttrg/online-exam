@@ -3,6 +3,19 @@
   display: flex;
   gap: 24px;
 
+  &__done {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    gap: 40px;
+
+    &Icon {
+      color: var(--color-success);
+    }
+  }
+
   &__questions {
     flex: 2.6;
   }

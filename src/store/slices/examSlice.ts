@@ -15,8 +15,6 @@ interface ExamState {
     question: QuestionModel;
     answer: AnswerValueType;
   }[];
-  isFirstQuestion: boolean;
-  isLastQuestion: boolean;
   isDone: boolean;
   isDisplayAnswer: boolean;
 }
@@ -25,8 +23,6 @@ const initialState: ExamState = {
   questions,
   activeQuestion: questions[0],
   userAnswers: [],
-  isFirstQuestion: true,
-  isLastQuestion: false,
   isDone: false,
   isDisplayAnswer: false,
 };
@@ -35,36 +31,8 @@ export const examSlice = createSlice({
   name: "exam",
   initialState,
   reducers: {
-    moveNextQuestion: (state) => {
-      if (state.isLastQuestion) {
-        state.isDone = true;
-        return state;
-      }
-
-      const currentQuestionIndex = questions.findIndex(
-        (item) => item.id === state.activeQuestion.id
-      );
-
-      const isLastQuestion = currentQuestionIndex === questions.length - 1;
-
-      if (!isLastQuestion) {
-        state.activeQuestion = questions[currentQuestionIndex + 1];
-      }
-      state.isFirstQuestion = false;
-      state.isLastQuestion = currentQuestionIndex === questions.length - 2;
-    },
-    moveBackQuestion: (state) => {
-      const currentQuestionIndex = questions.findIndex(
-        (item) => item.id === state.activeQuestion.id
-      );
-
-      const isFirstQuestion = currentQuestionIndex === 0;
-
-      if (!isFirstQuestion) {
-        state.activeQuestion = questions[currentQuestionIndex - 1];
-      }
-      state.isFirstQuestion = currentQuestionIndex === 1;
-      state.isLastQuestion = false;
+    finishExam: (state) => {
+      state.isDone = true;
     },
     answerToQuestion: (state, action: PayloadAction<AnswerValueType>) => {
       const answers = [...state.userAnswers];
@@ -77,35 +45,25 @@ export const examSlice = createSlice({
           ...answers[foundAnswerIndex],
           answer: action.payload,
         };
-      } else {
+      } else
         answers.push({
           answer: action.payload,
           question: state.activeQuestion,
         });
-      }
 
       state.userAnswers = answers;
     },
     switchDisplayAnswer: (state) => {
       state.isDisplayAnswer = !state.isDisplayAnswer;
     },
-
     adjustActiveQuestion: (state, action: PayloadAction<QuestionModel>) => {
       state.activeQuestion = action.payload;
-      const questionIndex = state.questions.findIndex(
-        (item) => item.id === action.payload.id
-      );
-
-      state.isLastQuestion = questionIndex === state.questions.length - 1;
-
-      state.isFirstQuestion = questionIndex === 0;
     },
   },
 });
 
 export const {
-  moveNextQuestion,
-  moveBackQuestion,
+  finishExam,
   answerToQuestion,
   switchDisplayAnswer,
   adjustActiveQuestion,

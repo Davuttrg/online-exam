@@ -10,10 +10,10 @@ const useRouter = () => {
       children: [
         {
           path: "/",
-          element: <Navigate to="/questions" />,
+          element: <Navigate to="/questions/1" />,
         },
         {
-          path: "/questions",
+          path: "/questions/:questionId",
           element: <ResolveTest />,
         },
       ],

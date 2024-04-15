@@ -1,0 +1,15 @@
+export const LocalAsset = {
+  homeIcon: "../images/sidebar/anasayfa.svg",
+  lessonsIcon: "../images/sidebar/dersler.svg",
+  questionsIcon: "../images/sidebar/sorubankasi.svg",
+  examsIcon: "../images/sidebar/denemesinavlari.svg",
+  guideIcon: "../images/sidebar/rehberlik-video.svg",
+  statisticsIcon: "../images/sidebar/istatistik.svg",
+  evaluationIcon: "../images/sidebar/olcme-degerlendirme.svg",
+  resolverIcon: "../images/sidebar/cozucu-app.svg",
+  understandnowIcon: "../images/sidebar/simdianladim.svg",
+  coachIcoon: "../images/sidebar/kocumyanimda.svg",
+  logo: "../images/sidebar/logo.svg",
+  adviceIcon: "../images/sidebar/gorusoneri.svg",
+  lessonCategoryIcon: "../images/ders-icon.svg",
+};

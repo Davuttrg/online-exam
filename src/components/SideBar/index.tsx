@@ -1,50 +1,51 @@
 import { NavLink } from "react-router-dom";
 import styles from "./style.module.scss";
 import cx from "classnames";
+import { LocalAsset } from "../../constants";
 
 const SideBar = () => {
   const pageNav = [
     {
-      icon: "./images/sidebar/anasayfa.svg",
+      icon: LocalAsset.homeIcon,
       path: "home",
     },
     {
-      icon: "./images/sidebar/dersler.svg",
+      icon: LocalAsset.lessonsIcon,
       path: "lessons",
     },
     {
-      icon: "./images/sidebar/sorubankasi.svg",
+      icon: LocalAsset.questionsIcon,
       path: "questions",
     },
     {
-      icon: "./images/sidebar/denemesinavlari.svg",
+      icon: LocalAsset.examsIcon,
       path: "exams",
     },
     {
-      icon: "./images/sidebar/rehberlik-video.svg",
+      icon: LocalAsset.guideIcon,
       path: "guide",
     },
     {
-      icon: "./images/sidebar/istatistik.svg",
+      icon: LocalAsset.statisticsIcon,
       path: "statistics",
     },
     {
-      icon: "./images/sidebar/olcme-degerlendirme.svg",
+      icon: LocalAsset.evaluationIcon,
       path: "evaluation",
     },
   ];
 
   const appNav = [
     {
-      icon: "./images/sidebar/cozucu-app.svg",
+      icon: LocalAsset.resolverIcon,
       path: "resolver",
     },
     {
-      icon: "./images/sidebar/simdianladim.svg",
+      icon: LocalAsset.understandnowIcon,
       path: "understandnow",
     },
     {
-      icon: "./images/sidebar/kocumyanimda.svg",
+      icon: LocalAsset.coachIcoon,
       path: "coach",
     },
   ];
@@ -53,7 +54,7 @@ const SideBar = () => {
     <nav className={styles.sideBar}>
       <div>
         <div className={styles.sideBar__logo}>
-          <img src="./images/sidebar/logo.svg" alt="logo" />
+          <img src={LocalAsset.logo} alt="logo" />
         </div>
         <div className={styles.sideBar__list}>
           {pageNav.map((item) => (
@@ -83,7 +84,7 @@ const SideBar = () => {
         </div>
       </div>
       <NavLink className={styles.sideBar__listItem} to="/advice">
-        <img src="./images/sidebar/gorusoneri.svg" alt="advice" />
+        <img src={LocalAsset.adviceIcon} alt="advice" />
       </NavLink>
     </nav>
   );

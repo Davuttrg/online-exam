@@ -1,8 +1,5 @@
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
-import {
-  adjustActiveQuestion,
-  switchDisplayAnswer,
-} from "../../store/slices/examSlice";
+import { switchDisplayAnswer } from "../../store/slices/examSlice";
 import { AnswerValueType, QuestionModel } from "../Questions/type";
 import Button from "../common/Button";
 import Card from "../common/Card";
@@ -12,10 +9,13 @@ import { BiPowerOff } from "react-icons/bi";
 import cx from "classnames";
 import { useState } from "react";
 import AlertDialog from "../common/AlertDialog";
+import { LocalAsset } from "../../constants";
+import { useNavigate } from "react-router-dom";
 
 const AnswerKey = () => {
   const examState = useAppSelector((state) => state.exam);
   const dispatch = useAppDispatch();
+  const navigate = useNavigate();
   const [isCancelTextDialogOpened, setIsCancelTextDialogOpened] =
     useState(false);
 
@@ -35,7 +35,7 @@ const AnswerKey = () => {
     examState.activeQuestion.id === question.id;
 
   const handleAnswerClick = (question: QuestionModel) =>
-    dispatch(adjustActiveQuestion(question));
+    navigate(`/questions/${question.id}`);
 
   return (
     <div className={styles.answerKey}>
@@ -68,7 +68,7 @@ const AnswerKey = () => {
       </div>
       <Card className={styles.answerKey__card}>
         <div className={styles.answerKey__cardHeader}>
-          <img src="./images/ders-icon.svg" alt="category" />
+          <img src={LocalAsset.lessonCategoryIcon} alt="category" />
 
           <div className={styles.answerKey__cardHeaderCaption}>
             <h4>Türkçe</h4>
