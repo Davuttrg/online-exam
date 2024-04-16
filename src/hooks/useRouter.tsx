@@ -13,7 +13,7 @@ const useRouter = () => {
           element: <Navigate to="/questions/1" />,
         },
         {
-          path: "/questions/:questionId",
+          path: "/questions/:questionOrder",
           element: <ResolveTest />,
         },
       ],

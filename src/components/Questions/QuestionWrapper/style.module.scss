@@ -1,9 +1,21 @@
 .questionWrapper {
+  @keyframes fadeUp {
+    0% {
+      opacity: 0;
+      transform: translateY(4px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+
   display: flex;
   flex-direction: column;
   gap: 40px;
   height: calc(100vh - 368px);
   overflow: auto;
+  animation: fadeUp 0.25s ease;
 
   &__answers {
     display: flex;

@@ -1,3 +1,4 @@
+import { useCallback, useMemo } from "react";
 import { useAppDispatch, useAppSelector } from "../../../store/hooks";
 import { answerToQuestion } from "../../../store/slices/examSlice";
 import QuestionAnswerItem from "../QuestionAnswerItem";
@@ -8,32 +9,57 @@ const QuestionWrapper = () => {
   const examState = useAppSelector((state) => state.exam);
   const dispatch = useAppDispatch();
 
-  const selectedAnswer = examState.userAnswers.find(
-    (item) => item.question.id === examState.activeQuestion.id
+  const selectedAnswer = useMemo(
+    () =>
+      examState.userAnswers.find(
+        (item) => item.question.id === examState.activeQuestion.id
+      ),
+    [examState.activeQuestion.id, examState.userAnswers]
   );
 
   const handleAnswerChange = (answer: AnswerValueType) => {
     dispatch(answerToQuestion(answer));
   };
 
-  const isSuccessAnswer = (answer: AnswerValueType) =>
-    selectedAnswer &&
-    examState.isDisplayAnswer &&
-    answer === examState.activeQuestion.realAnswerValue;
+  const isSuccessAnswer = useCallback(
+    (answer: AnswerValueType) =>
+      selectedAnswer &&
+      examState.isDisplayAnswer &&
+      answer === examState.activeQuestion.realAnswerValue,
+    [
+      examState.activeQuestion.realAnswerValue,
+      examState.isDisplayAnswer,
+      selectedAnswer,
+    ]
+  );
 
-  const isWrongAnswer = (answer: AnswerValueType) =>
-    selectedAnswer &&
-    selectedAnswer.answer === answer &&
-    examState.isDisplayAnswer &&
-    selectedAnswer.answer !== examState.activeQuestion.realAnswerValue;
+  const isWrongAnswer = useCallback(
+    (answer: AnswerValueType) =>
+      selectedAnswer &&
+      selectedAnswer.answer === answer &&
+      examState.isDisplayAnswer &&
+      selectedAnswer.answer !== examState.activeQuestion.realAnswerValue,
+    [
+      examState.activeQuestion.realAnswerValue,
+      examState.isDisplayAnswer,
+      selectedAnswer,
+    ]
+  );
 
-  const displayAnswerVideo = (ansver: AnswerValueType) =>
-    selectedAnswer &&
-    examState.isDisplayAnswer &&
-    ansver === examState.activeQuestion.realAnswerValue;
+  const displayAnswerVideo = useCallback(
+    (ansver: AnswerValueType) =>
+      selectedAnswer &&
+      examState.isDisplayAnswer &&
+      ansver === examState.activeQuestion.realAnswerValue,
+    [
+      examState.activeQuestion.realAnswerValue,
+      examState.isDisplayAnswer,
+      selectedAnswer,
+    ]
+  );
 
   return (
-    <div className={styles.questionWrapper}>
+    <div className={styles.questionWrapper} key={examState.activeQuestion.id}>
       <p
         dangerouslySetInnerHTML={{ __html: examState.activeQuestion.question }}
       />

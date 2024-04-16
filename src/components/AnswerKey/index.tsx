@@ -1,16 +1,17 @@
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
 import { switchDisplayAnswer } from "../../store/slices/examSlice";
-import { AnswerValueType, QuestionModel } from "../Questions/type";
+import { QuestionModel } from "../Questions/type";
 import Button from "../common/Button";
 import Card from "../common/Card";
 import Switch from "../common/Switch";
 import styles from "./style.module.scss";
 import { BiPowerOff } from "react-icons/bi";
-import cx from "classnames";
+
 import { useState } from "react";
 import AlertDialog from "../common/AlertDialog";
 import { LocalAsset } from "../../constants";
 import { useNavigate } from "react-router-dom";
+import AnswerKeyRowItem from "./AnswerKeyRowItem";
 
 const AnswerKey = () => {
   const examState = useAppSelector((state) => state.exam);
@@ -20,19 +21,6 @@ const AnswerKey = () => {
     useState(false);
 
   const handleDisplayAnswer = () => dispatch(switchDisplayAnswer());
-
-  const userAnswerByQuestion = (
-    question: QuestionModel,
-    answer: AnswerValueType
-  ) => {
-    const userAnswer = examState.userAnswers.find(
-      (item) => item.question.id === question.id
-    );
-    return userAnswer?.answer === answer;
-  };
-
-  const isCurrentQuestion = (question: QuestionModel) =>
-    examState.activeQuestion.id === question.id;
 
   const handleAnswerClick = (question: QuestionModel) =>
     navigate(`/questions/${question.id}`);
@@ -78,33 +66,11 @@ const AnswerKey = () => {
 
         <div className={styles.answerKey__cardAnswer}>
           {examState.questions.map((question) => (
-            <div
-              onClick={() => handleAnswerClick(question)}
+            <AnswerKeyRowItem
               key={question.id}
-              className={cx(styles.answerKey__cardAnswerRow, {
-                [styles["answerKey__cardAnswerRow--active"]!]:
-                  isCurrentQuestion(question),
-              })}
-            >
-              <h5 className={styles.answerKey__cardAnswerRowQuestion}>
-                {`${question.order}. Soru`}{" "}
-              </h5>
-
-              <ul className={styles.answerKey__cardAnswerRowOptions}>
-                {question.answers.map((answer, i) => (
-                  <li
-                    key={answer.value + i}
-                    className={cx(styles.answerKey__cardAnswerRowOptionsItem, {
-                      [styles[
-                        "answerKey__cardAnswerRowOptionsItem--answered"
-                      ]!]: userAnswerByQuestion(question, answer.value),
-                    })}
-                  >
-                    {answer.value}
-                  </li>
-                ))}
-              </ul>
-            </div>
+              question={question}
+              onClick={handleAnswerClick}
+            />
           ))}
         </div>
       </Card>

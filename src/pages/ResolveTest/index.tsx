@@ -4,23 +4,20 @@ import Questions from "../../components/Questions";
 import styles from "./style.module.scss";
 import { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
-import { adjustActiveQuestion } from "../../store/slices/examSlice";
+import { adjustActiveQuestionByOrder } from "../../store/slices/examSlice";
 import { BiCheckDouble } from "react-icons/bi";
 import Card from "../../components/common/Card";
 
 const ResolveTest = () => {
-  const { questionId } = useParams();
+  const { questionOrder } = useParams();
   const examState = useAppSelector((state) => state.exam);
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-    if (questionId) {
-      const question = examState.questions.find(
-        (item) => item.id === Number(questionId)
-      );
-      if (question) dispatch(adjustActiveQuestion(question));
+    if (questionOrder) {
+      dispatch(adjustActiveQuestionByOrder(Number(questionOrder)));
     }
-  }, [dispatch, examState, questionId]);
+  }, [dispatch, questionOrder]);
 
   return (
     <div className={styles.resolveTest}>

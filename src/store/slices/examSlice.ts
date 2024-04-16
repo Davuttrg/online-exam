@@ -56,8 +56,11 @@ export const examSlice = createSlice({
     switchDisplayAnswer: (state) => {
       state.isDisplayAnswer = !state.isDisplayAnswer;
     },
-    adjustActiveQuestion: (state, action: PayloadAction<QuestionModel>) => {
-      state.activeQuestion = action.payload;
+    adjustActiveQuestionByOrder: (state, action: PayloadAction<number>) => {
+      const question = state.questions.find(
+        (item) => item.order === Number(action.payload)
+      );
+      if (question) state.activeQuestion = question;
     },
   },
 });
@@ -66,7 +69,7 @@ export const {
   finishExam,
   answerToQuestion,
   switchDisplayAnswer,
-  adjustActiveQuestion,
+  adjustActiveQuestionByOrder,
 } = examSlice.actions;
 
 export default examSlice.reducer;
